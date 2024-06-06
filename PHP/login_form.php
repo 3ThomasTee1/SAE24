@@ -1,0 +1,48 @@
+<?php
+	// Démarrage de la session
+	session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Administrateur</title>
+    <link rel="stylesheet" href="../Style/style_connexion.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Switching Cabinet</h1>
+            <ul>
+                <li><a href="../Scripts/index.html">Accueil</a></li>
+                <li><a href="../Scripts/rendez_vous.html">Rendez-vous</a></li>
+                <li><a href="../Scripts/mentions_legales.html">Mentions légales</a></li>
+            </ul>
+            <a href="login_form.php" class="login">Me connecter</a>
+        </nav>
+    </header>
+    <main>
+        <section class="login-container">
+            <h2>Connexion Administrateur</h2>
+            <form action="login.php" method="post">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                <button type="submit">Connexion</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.iut-blagnac.fr/" target="_blank"><strong>l'IUT de Blagnac</strong></a></li>
+            <li>Département Réseaux et Télécommunications</li>
+            <li>BUT1</li>
+            <li><a href="Mentions_legales.html"> Mentions légales</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+

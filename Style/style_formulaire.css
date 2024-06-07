@@ -52,7 +52,7 @@ header nav ul li a {
 
 /* Style qui s'applique à la liste du sommaire */
 
-.Sommaire{
+.Sommaire ul{
 	color: black;
 	background: white;
     padding: 20px;
@@ -75,14 +75,6 @@ header nav ul li a {
 .Sommaire ul li a:hover{
 	text-decoration: underline;
 }
-
-/* Effet qui permet d'enlever la décoration des liens */
-
-a{
-	color: black;
-    text-decoration: none;
-}
-
 
 .login {
     color: white;
@@ -127,47 +119,8 @@ main {
     margin: 0 auto;
 }
 
-/* Style qui s'applique aux tableaux */
+/* Style qui s'applique sur les boutons bleu  */
 
-table{
-	width: 65%;
-	border-collapse: collapse;
-}
-
-caption{
-  padding: 10px;
-  font-weight: bold;
-  background: #333333;
-  color: white;
-}
-
-th{
-  background: #C2BCBC;
-  color: white;
-  border: 1px solid black;
-}
-
-td{
-  border: 1px solid black;
-  padding: 10px;
-}
-
-article {
-    display: none;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-article:target {
-    display: block;
-}
-
-article h3 {
-    margin-top: 0;
-}
 
 button {
     background: #007bff;
@@ -213,156 +166,65 @@ tab-buttons {
     max-width: 800px;
 }
 
-form
-{
-	background-color: white;
-	margin-top: 5%;
-	margin-left: 30%;
-	margin-right: 30%;
-	margin-bottom: 5%;
-	padding: 2%;
-	border-radius: 8px;
-	
-}
-
 /* Effet on:hover qui s'applique sur les liens */
 
 a:hover{
 	text-decoration: underline;
 }
 
-/* Style qui s'applique au titre du formulaire */
-
-form h1
-{
-	font-size: 20px;
-}
-
-/* Style qui s'applique au formulaire */
-
-form #corps_formulaire
-{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 40px;
-	justify-content: center;
-	justify-content: space-between;
-    align-items: center;
-}
-
-form #corps_formulaire .groupe
-{
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-form #corps_formulaire #gauche .groupe input
-{
-	margin-top: 5px;
-	padding: 10px 5px 10px 5px;
-	border: 1px solid;
-	border-radius: 8px;
-	font-size: 15px;
-}
-
-form #corps_formulaire #droite .groupe textarea
-{
-	margin-top: 5px;
-	padding: 10px 5px 10px 5px;
-	border: 1px solid;
-	border-radius: 8px;
-	resize: none;
-	font-size: 15px;
-}
-
-form #pied_formulaire button
-{
-	font-size: 15px;
-	padding: 10px 15px;
-	cursor: pointer;
-	transition: transform 0.5s;
-	
-}
-form #pied_formulaire
-{
-	display: flex;
+/* Styles pour centrer les formulaires 'participants'*/
+.form-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 80vh; /* Ajustez la hauteur selon vos besoins */
 }
-
-form #pied_formulaire button:hover
-{
-	transform: scale(1.05);
+.form-container form {
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 700px; /* Ajustez la largeur selon vos besoins */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Style qui s'applique aux images pour les livrables */
-
-.image-livrable {
-    width: auto;
-    height: auto;
-    max-width: 100%; /* Cette ligne assure que les images ne dépassent pas la largeur de leur conteneur */
-    display: block; /* Assure que les images sont affichées comme des blocs pour gérer les marges et le centrage */
-	border: 1px solid #000; /* Ajoute une bordure de 1px de couleur noire */
-    border-radius: 5px; /* Optionnel : ajoute des coins arrondis */
+.form-container form h2 {
+    text-align: center;
 }
-
+.form-container form label,
+.form-container form select,
+.form-container form input.bouton {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+.form-container form input.bouton {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-container form input.bouton:hover {
+    background-color: #555;
+}
 
 /* Style qui s'applique au bloc aside */
 
 aside#last{
-    margin: 50px
+	margin: 50px
   }
   
-  aside a{
-    text-decoration: none;
+aside a{
+	text-decoration: none;
   }
   
-  aside img{
-      border: 0;
-      width: 5%;
-      height: 5%;
+aside img{
+	border: 0;
+	width: 5%;
+	height: 5%;
   }
-
-/* Style qui s'applique au bloc aside des pages participants  */
-
-.encadre {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Ajustez la largeur si nécessaire */
-    position: absolute; /* Utilisez la position absolue */
-    top: 150px; /* Ajustez la position verticale */
-    right: 150px; /* Ajustez la position horizontale */
-}
-
-.encadre img {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.encadre h2 {
-    margin-top: 20px;
-}
-
-.encadre p {
-    margin-top: 10px;
-}
-
-/* Style qui s'applique au bloc aside pour les sommaires  */
-
-.Sommaire {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Ajustez la largeur si nécessaire */
-    position: absolute; /* Utilisez la position absolue */
-    top: 150px; /* Ajustez la position verticale */
-    right: 200px; /* Ajustez la position horizontale */
-}
 
 img {
     width: 100%;
@@ -396,6 +258,12 @@ footer ul li {
 footer ul li a {
     color: white;
     text-decoration: none;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
 }
 
 .logo {

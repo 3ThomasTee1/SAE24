@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+	line-height: 1.5;
     background-color: #f0f0f0;
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -28,6 +29,7 @@ header nav {
 header h1 {
     margin: 0;
     font-size: 24px;
+    margin-right: auto; /* Pushes the h1 to the left */
 }	
 
 header nav ul {
@@ -36,6 +38,8 @@ header nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    flex: 1; /* Allows the ul to take up the remaining space */
 }
 
 header nav ul li a {
@@ -127,4 +131,10 @@ footer ul li {
 footer ul li a {
     color: white;
     text-decoration: none;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
 }

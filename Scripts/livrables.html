@@ -9,11 +9,11 @@
 <body>
     <header>
         <nav>
-            <h1>Switching Cabinet</h1>
+            <img src="../Images/logo_cabinet.png" alt="Switching Cabinet Logo" class="logo">
+            <h1 id="haut_de_page">Switching Cabinet</h1>
             <ul>
                 <li><a href="index.html"> Accueil</a></li>
-                <li><a href="rendez_vous.html"> Rendez-vous</a></li>
-				<li><a href="mentions_legales.html"> Mentions légales</a></li>
+                <li><a href="rendez_vous2.html"> Rendez-vous</a></li>
                 <!--<li><a href="index.html"> Nous contacter</a></li>!-->
 			</ul>
             <a href="administration.html" class="login">Me connecter</a>
@@ -26,20 +26,67 @@
 			<button onclick="window.location.href='gestion_projet.html'">Gestion de projet</button>
 			<button onclick="window.location.href='tests.html'">Tests</button>
 		</nav>
+		<aside class="Sommaire">
+			<h2>Sommaire</h2>
+				<nav>
+					<ul>
+						<li><a href="#plan_adressage"><strong>Plan d'adressage</strong></a></li>
+						<li><a href="#plan_telephonique"><strong>Plan de numérotation téléphonique</strong></a></li>
+						<li><a href="#mdp"><strong>Mot de passe</strong></a></li>
+						<li><a href="#problemes_rencontres"><strong>Problèmes rencontrés</strong></a></li>
+						<li><a href="#video"><strong>Vidéo de présentation</strong></a></li>
+					</ul>
+				</nav>
+        </aside>
         <section id="home" class="tab-content">
-			<h1>Test 1</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			 eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		<h1>Test 2</h1>
+			<h1 id="plan_adressage">Plan d'adressage</h1>
+        <p><strong>Visual Paradigm</strong> est un outil de modélisation et de conception qui prend en charge une large gamme de diagrammes utilisés dans la gestion de projets, l'analyse de 
+		systèmes, le développement logiciel, et plus encore. Parmi ses nombreuses fonctionnalités, Visual Paradigm permet la création de <strong>schémas réseau</strong>. Nous avons donc utilisé 
+		cet outil pour le dernier point que nous venons de mentionner. Vous pourrez donc voir sur ce schéma le réseau que nous avons crée pour ce projet. Ce schéma contient :</br>
+		<ul>
+			<li><strong>Le service de téléphonie : </strong>il est assuré par le <strong>serveur asterisk</strong>. De plus, chaque membre du cabinet dispose d'<strong>un téléphone numérique/analogique</strong> ou d'<strong>un softphone</strong>.</li>
+			<li><strong>Aspects informatique, système et réseau : </strong><ul class="sous-liste">
+                <li>Chaque membre du cabinet paramédical doit disposer d’<strong>un ordinateur de bureau</strong> câblé, sous Windows 10 avec une identification
+				par login et mot de passe et disposer des applications bureautiques, de navigation Web et de messagerie (Thunderbird)</li>
+				</li>
+                <li>La couverture Wi-Fi du cabinet est assurée par un seul <strong>point d’accès Wi-Fi</strong></li>
+                <li>Le plan d’adressage de classe C privée /24</li>
+            </ul>
+			<li><strong>Un hyperviseur de type 1 (VMware EXSi 6.7) supporte 2 machines virtuelles :</strong>
+				<ul class="sous-liste">
+					<li>Un contrôleur de domaine sous Windows Server 2019 qui assure la <strong>centralisation des comptes utilisateurs</strong> et met à la disposition de chaque utilisateur un espace disque dédié.
+					Ce serveur assure également les services de <strong>DHCP</strong> et de <strong>DNS</strong> pour le cabinet et pourra supporter certaines applications métiers. Mais aussi, l’application <strong>The Dude</strong>. Cette application gratuite permet
+					une vue globale sur tous les éléments d’un réseau afin d’en assurer la supervision en temps réel.</li>
+					<li>Un <strong>serveur GNU/Linux</strong> sous Ubuntu est nécessaire pour héberger certaines applications métiers et plusieurs services (dont : Web, MySQL, FTP, TFTP, asterisk, SMTP, POP3).</li>
+				</ul>
+			</li>
+		</ul>
+		Lien vers le schéma réseau : 
+		</p>
+		<h1 id="plan_telephonique">Plan de numérotation téléphonique complet</h1>
 		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
 			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
 			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		<h1>Test 3</h1>
+		<h1 id="mdp">Mot de passe</h1>
 		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
 			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
 			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		</section>
+        <h1 id="problemes_rencontres">Problèmes rencontrés</h1>
+		<p>Ce tableau est le reflet des difficultés que nous avons rencontrés au cours de la création de cette SAE 24. Dans certains cas, nous avons pu trouver des solutions, dans d'autres non.</p>
+            <table>
+                <caption>SAE 24</caption>
+                    <tr>
+                        <th>Difficultés rencontrés</th>
+                        <th>Solutions trouvés</th>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                    </tr>
+            </table>
+        <h1 id="video">Vidéo de présentation de la preuve de concept</h1>
+		<a class="Redirection" href="#haut_de_page"><strong>Retourner en haut de la page</strong></a>
+        </section>
     </main>
     <aside id="last">
 		<hr>

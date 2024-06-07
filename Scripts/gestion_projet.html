@@ -9,11 +9,11 @@
 <body>
     <header>
         <nav>
-            <h1>Switching Cabinet</h1>
+            <img src="../Images/logo_cabinet.png" alt="Switching Cabinet Logo" class="logo">
+            <h1 id="haut_de_page">Switching Cabinet</h1>
             <ul>
                 <li><a href="index.html"> Accueil</a></li>
                 <li><a href="rendez_vous.html"> Rendez-vous</a></li>
-				<li><a href="mentions_legales.html"> Mentions légales</a></li>
                 <!--<li><a href="index.html"> Nous contacter</a></li>!-->
 			</ul>
             <a href="administration.html" class="login">Me connecter</a>
@@ -26,19 +26,41 @@
 			<button onclick="window.location.href='gestion_projet.html'">Gestion de projet</button>
 			<button onclick="window.location.href='tests.html'">Tests</button>
 		</nav>
+		<aside class="Sommaire">
+			<h2>Sommaire</h2>
+				<nav>
+					<ul>
+						<li><a href="#gantt"><strong>Diagramme de Gantt</strong></a></li>
+						<li><a href="#github"><strong>Github</strong></a></li>
+						<li><a href="#drive"><strong>Google Drive</strong></a></li>
+					</ul>
+				</nav>
+        </aside>
         <section id="home" class="tab-content">
-			<h1>Test 1</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			 eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		<h1>Test 2</h1>
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		<h1>Test 3</h1>
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+			<h1 id="gantt">Gantt</h1>
+                <p>Vous pouvez voir ici le diagramme de Gantt que nous avons réalisé pour ce projet. Un diagramme de Gantt est un outil utilisé en ordonnancement et en gestion de 
+				projet et permettant de visualiser dans le temps les diverses tâches composant un projet.</p>
+				<a href="../Telechargement/sae24.gan" download="sae24.gan">Télécharger de notre diagramme de Gantt</a>
+
+            <h1 id="github">GitHub</h1>
+				<p>Dans le cadre de la SAE 24, nous avons utilisé l'outil GitHub. GitHub est une plateforme de gestion de code source utilisant Git. Il nous permet  
+				de collaborer, de gérer des versions de code, de suivre les modifications, et de travailler sur des projets en équipe de manière efficace. Il nous a été utile pour
+				la gestion des nombreuses versions de notre site web.</p>
+				<h3>Analyse de la Capture d'Écran :</h3>
+					<p><strong>Images : </strong>Contient les fichiers images que nous avons utilisé pour le projet</br>
+					<strong>PHP : </strong>Contient des scripts PHP pour la gestion des connexions utilisateurs, pour les 
+					redirection entre certaine page grâce au formulaire.</br>
+					<strong>Scripts : </strong>Ce répertoire contient tout les scripts HTML que nous avons utilisé pour la réalisation du site web.</br>
+					<strong>Style : </strong>Il contient les différents fichier CSS pour le style et la mise en page.</br>
+					<strong>Téléchargement : </strong>C'est le dernier répertoire que nous avons ajouté dans GitHub. Il contient les fichiers téléchargeables pour certain livrable.</p>
+				<img class= "image-livrable" src="../Images/livrable_github.png" alt="Image GitHub">
+				<p>Lien vers notre projet GitHub : <a href="" target="_blank"></a></p>
+			<h1 id="drive">Google Drive</h1>
+				<p>Google Drive est un service de stockage en ligne proposé par Google, nous permettant de sauvegarder, partager et collaborer sur des fichiers et des 
+				dossiers dans le cloud. Dans notre cas, nous avons utilisé la solution google drive pour les mêmes raisons que GitHub, à savoir stocker facilement les versions de notre
+				projet, notamment le site web. Vous pouvez donc voir ci-dessous différentes versions de notre site web.</p>
+				<img class= "image-livrable" src="../Images/livrable_google-drive.png" alt="Image Drive">
+			<a class="Redirection" href="#haut_de_page"><strong>Retourner en haut de la page</strong></a>
 		</section>
     </main>
     <aside id="last">

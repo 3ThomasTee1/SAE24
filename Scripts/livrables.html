@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabinet Médical</title>
     <link rel="stylesheet" href="../Style/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,6 +31,7 @@
 			<h2>Sommaire</h2>
 				<nav>
 					<ul>
+						<li><a href="#presentation_sae"><strong>Présentation de la SAE </strong></a></li>
 						<li><a href="#plan_adressage"><strong>Plan d'adressage</strong></a></li>
 						<li><a href="#plan_telephonique"><strong>Plan de numérotation téléphonique</strong></a></li>
 						<li><a href="#mdp"><strong>Mot de passe</strong></a></li>
@@ -39,51 +41,149 @@
 				</nav>
         </aside>
         <section id="home" class="tab-content">
-			<h1 id="plan_adressage">Plan d'adressage</h1>
-        <p><strong>Visual Paradigm</strong> est un outil de modélisation et de conception qui prend en charge une large gamme de diagrammes utilisés dans la gestion de projets, l'analyse de 
-		systèmes, le développement logiciel, et plus encore. Parmi ses nombreuses fonctionnalités, Visual Paradigm permet la création de <strong>schémas réseau</strong>. Nous avons donc utilisé 
-		cet outil pour le dernier point que nous venons de mentionner. Vous pourrez donc voir sur ce schéma le réseau que nous avons crée pour ce projet. Ce schéma contient :</br>
-		<ul>
-			<li><strong>Le service de téléphonie : </strong>il est assuré par le <strong>serveur asterisk</strong>. De plus, chaque membre du cabinet dispose d'<strong>un téléphone numérique/analogique</strong> ou d'<strong>un softphone</strong>.</li>
-			<li><strong>Aspects informatique, système et réseau : </strong><ul class="sous-liste">
-                <li>Chaque membre du cabinet paramédical doit disposer d’<strong>un ordinateur de bureau</strong> câblé, sous Windows 10 avec une identification
-				par login et mot de passe et disposer des applications bureautiques, de navigation Web et de messagerie (Thunderbird)</li>
-				</li>
-                <li>La couverture Wi-Fi du cabinet est assurée par un seul <strong>point d’accès Wi-Fi</strong></li>
-                <li>Le plan d’adressage de classe C privée /24</li>
-            </ul>
-			<li><strong>Un hyperviseur de type 1 (VMware EXSi 6.7) supporte 2 machines virtuelles :</strong>
-				<ul class="sous-liste">
-					<li>Un contrôleur de domaine sous Windows Server 2019 qui assure la <strong>centralisation des comptes utilisateurs</strong> et met à la disposition de chaque utilisateur un espace disque dédié.
-					Ce serveur assure également les services de <strong>DHCP</strong> et de <strong>DNS</strong> pour le cabinet et pourra supporter certaines applications métiers. Mais aussi, l’application <strong>The Dude</strong>. Cette application gratuite permet
-					une vue globale sur tous les éléments d’un réseau afin d’en assurer la supervision en temps réel.</li>
-					<li>Un <strong>serveur GNU/Linux</strong> sous Ubuntu est nécessaire pour héberger certaines applications métiers et plusieurs services (dont : Web, MySQL, FTP, TFTP, asterisk, SMTP, POP3).</li>
-				</ul>
-			</li>
-		</ul>
-		Lien vers le schéma réseau : 
-		</p>
+            <h1 id="presentation_sae">Présentation de la SAE</h1>
+            <h2>Problématique Professionnelle</h2>
+            <p>
+                Dans le domaine des réseaux et télécommunications (R&T), il est essentiel que les professionnels comprennent en profondeur les architectures complètes des réseaux, systèmes et services, qu'elles soient internes à leur entreprise ou pour des clients.<br>
+                Le professionnel R&T doit effectuer une analyse détaillée de ces éléments pour pouvoir intervenir efficacement, assurer leur interaction harmonieuse et proposer des améliorations.
+            </p>
+            <h2>Qu'est-ce qu'une SAE ?</h2>
+            <p>
+                Une Situation d'Apprentissage et d'Évaluation (SAE) est une situation didactique constituée d'une ou plusieurs tâches que l'étudiant doit réaliser pour atteindre un objectif fixé. Elle permet de mettre en pratique les compétences et les connaissances acquises.
+            </p>
+            <h2>Contexte du Projet</h2>
+            <p>
+                <strong>Entreprise :</strong> La société SipOcc, spécialisée dans la conception, installation, configuration et maintenance des systèmes d'information pour cabinets paramédicaux en région Occitanie. Elle intervient également en tant qu'expert en cybersécurité et propose des formations.<br>
+                <strong>Demande du Client :</strong> Un groupement de cabinets paramédicaux en Haute-Garonne souhaite une refonte complète de leur système d'information pour deux sites existants et prévoit de s'étendre à d'autres sites en région Occitanie. Ils ont contacté votre société pour réaliser une preuve de concept (PoC) de ce projet.
+            </p>
+            <h2>Expression des Besoins Intrasites</h2>
+            <h3>Aspect Informatique, Système et Réseau :</h3>
+            <p>
+                Un serveur GNU/Linux sous Ubuntu est nécessaire pour héberger certaines applications métiers et plusieurs services, notamment : Web, MySQL, FTP, TFTP, Asterisk, SMTP, et POP3.
+            </p>
+            <h3>Aspect Téléphonie :</h3>
+            <p>
+                Les besoins spécifiques en téléphonie doivent être évalués et intégrés au système d'information.
+            </p>
+            <h3>Aspect Réseaux Informatiques et Téléphoniques Intersites :</h3>
+            <p>
+                La connectivité et l'interaction entre les différents sites doivent être assurées pour un fonctionnement harmonieux et efficace.
+            </p>
+
+            <h1 id="plan_adressage">Plan d'adressage</h1>
+            <p>
+                <strong>Visual Paradigm</strong> est un outil de modélisation et de conception qui prend en charge une large gamme de diagrammes utilisés dans la gestion de projets, l'analyse de systèmes, le développement logiciel, et plus encore. Parmi ses nombreuses fonctionnalités, Visual Paradigm permet la création de <strong>schémas réseau</strong>. Nous avons donc utilisé cet outil pour le dernier point que nous venons de mentionner. Vous pourrez donc voir sur ce schéma le réseau que nous avons créé pour ce projet. Ce schéma contient :<br>
+                <ul>
+                    <li><strong>Le service de téléphonie :</strong> il est assuré par le <strong>serveur asterisk</strong>. De plus, chaque membre du cabinet dispose d'<strong>un téléphone numérique/analogique</strong> ou d'<strong>un softphone</strong>.</li>
+                    <li><strong>Aspects informatique, système et réseau :</strong>
+                        <ul class="sous-liste">
+                            <li>Chaque membre du cabinet paramédical doit disposer d’<strong>un ordinateur de bureau</strong> câblé, sous Windows 10 avec une identification par login et mot de passe et disposer des applications bureautiques, de navigation Web et de messagerie (Thunderbird)</li>
+                            <li>La couverture Wi-Fi du cabinet est assurée par un seul <strong>point d’accès Wi-Fi</strong></li>
+                            <li>Le plan d’adressage de classe C privée /24</li>
+                        </ul>
+                    </li>
+                    <li><strong>Un hyperviseur de type 1 (VMware EXSi 6.7) supporte 2 machines virtuelles :</strong>
+                        <ul class="sous-liste">
+                            <li>Un contrôleur de domaine sous Windows Server 2019 qui assure la <strong>centralisation des comptes utilisateurs</strong> et met à la disposition de chaque utilisateur un espace disque dédié. Ce serveur assure également les services de <strong>DHCP</strong> et de <strong>DNS</strong> pour le cabinet et pourra supporter certaines applications métiers. Mais aussi, l’application <strong>The Dude</strong>. Cette application gratuite permet une vue globale sur tous les éléments d’un réseau afin d’en assurer la supervision en temps réel.</li>
+                            <li>Un <strong>serveur GNU/Linux</strong> sous Ubuntu est nécessaire pour héberger certaines applications métiers et plusieurs services (dont : Web, MySQL, FTP, TFTP, Asterisk, SMTP, POP3).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+
 		<h1 id="plan_telephonique">Plan de numérotation téléphonique complet</h1>
 		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
 			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
 			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 		<h1 id="mdp">Mot de passe</h1>
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<p>Ci-dessous, vous retrouverez l'ensemble des mots de passe utilisés, dans cette SAE.</p>
+			  <table>
+        <thead>
+            <tr>
+                <th>Services</th>
+                <th>Login</th>
+                <th>MDP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ESXI</td>
+                <td>root</td>
+                <td>Passroot@12</td>
+            </tr>
+            <tr>
+                <td>VM ADDS root</td>
+                <td>root</td>
+                <td>Passroot@12</td>
+            </tr>
+            <tr>
+                <td>VM Ubuntu root</td>
+                <td>root</td>
+                <td>Passroot@12</td>
+            </tr>
+            <tr>
+                <td>Administrateur site web</td>
+                <td>admin</td>
+                <td>passadmin</td>
+            </tr>
+            <tr>
+                <td>FTP</td>
+                <td>daemon</td>
+                <td>passdaemon</td>
+            </tr>
+            <tr>
+                <td>Base de données PHP My Admin</td>
+                <td>admin_cabinet</td>
+                <td>passcabinet</td>
+            </tr>
+            <tr>
+                <td>Point d'accès wifi</td>
+                <td>switching-cabinet</td>
+                <td>12341234</td>
+            </tr>
+            <tr>
+                <td>Page connexion Aastra</td>
+                <td></td>
+                <td>12341234</td>
+            </tr>
+            <tr>
+                <td>Page administration Aastra</td>
+                <td>admin</td>
+                <td>000000</td>
+            </tr>
+        </tbody>
+    </table>
+			
+			
+			
         <h1 id="problemes_rencontres">Problèmes rencontrés</h1>
 		<p>Ce tableau est le reflet des difficultés que nous avons rencontrés au cours de la création de cette SAE 24. Dans certains cas, nous avons pu trouver des solutions, dans d'autres non.</p>
-            <table>
+        <table>
                 <caption>SAE 24</caption>
                     <tr>
-                        <th>Difficultés rencontrés</th>
-                        <th>Solutions trouvés</th>
+                        <th>Difficultés rencontrées</th>
+                        <th>Solutions trouvées</th>
                     </tr>
                     <tr>
-                        <td>A</td>
-                        <td>B</td>
+                        <td>Nous avons rencontrés certaines difficultés avec le PHP. En effet, nous ne sommes pas encore très à l'aise avec ce langage donc nous faisons encore des erreurs, et la compréhension est encore parfois difficile sur certains points.</td>
+                        <td>Pour surmonter ces défis, nous avons redoublé d'efforts et fait preuve d'une grande vigilance, notamment en ce qui concerne la syntaxe. Nous avons également beaucoup utilisé le TP R209 pour créer un site aussi propre que possible, en appliquant les balises et fonctions vues en cours. Nous nous sommes beaucoup entraideés : dès qu'une erreur survenait, deux d'entre nous examinaient minutieusement le code afin d'identifier efficacement le problème.</td>
                     </tr>
-            </table>
+                    <tr>
+                        <td>Pour la partie téléphonie :</br>Problème dans la documentation pour mettre sous tension le téléphone mobile. Nous n’arrivons pas à paramétrer le téléphone sans fil, à pouvoir l’appeler, etc. Son interface web ne nous permet pas de le configurer comme il se devrait avec l’IP du serveur Asterisk. Il y a un onglet setup, mais il nous manque l’ID que nous ne connaissons pas.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Pour la partie ESXi :</br>
+                        Tout d’abord, notre premier problème rencontré a été l’impossibilité de téléverser la VM “Windows_Server_2019” sur l’ESXi. Pour remédier à ce problème, nous avons décidé de télécharger l’iso de la VM, puis nous l’avons directement créée sur l’ESXi.</br>
+                        Cependant, lors de la mise sous tension de la VM, cette dernière ne démarrait pas en EFI. Nous avons donc décidé de lancer la VM en Bios et non en EFI ce qui a réglé le problème.</br>
+                        Enfin, nous avons eu un problème avec la VM “Ubuntu”, cette dernière a refusé de se lancer. Pour cela, nous avons dû récupérer un nouvel iso sur le serveur, puis téléverser l’iso de la VM pour en recréer une nouvelle.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nous avons eu seulement de très légères difficultés qui ne nous ont pas réellement posé problème, 2 serveurs DHCP étaient activés en même temps, ce qui a mené à un conflit quant à l’attribution de la passerelle par défaut.</td>
+                        <td></td>
+                    </tr>
+        </table>
         <h1 id="video">Vidéo de présentation de la preuve de concept</h1>
 		<a class="Redirection" href="#haut_de_page"><strong>Retourner en haut de la page</strong></a>
         </section>
@@ -108,3 +208,4 @@
     </footer>
 </body>
 </html>
+

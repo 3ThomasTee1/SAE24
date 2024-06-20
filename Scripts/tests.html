@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabinet Médical</title>
     <link rel="stylesheet" href="../Style/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,7 +16,6 @@
             <ul>
                 <li><a href="index.html"> Accueil</a></li>
                 <li><a href="rendez_vous.html"> Rendez-vous</a></li>
-                <!--<li><a href="index.html"> Nous contacter</a></li>!-->
 			</ul>
             <a href="administration.html" class="login">Me connecter</a>
         </nav>
@@ -26,16 +27,144 @@
 			<button onclick="window.location.href='gestion_projet.html'">Gestion de projet</button>
 			<button onclick="window.location.href='tests.html'">Tests</button>
 		</nav>
+		<aside class="Sommaire">
+		<h2>Sommaire</h2>
+			<nav>
+				<ul>
+					<li><a href="#Reseau_packet_tracer"><strong>Notre Réseau Packet Tracer</strong></a></li>
+					<li><a href="#Test_de_connectivite"><strong>Résultats des tests de connectivités réseaux</strong></a></li>
+					    <ul>
+					            <li><a href="#Test_notre_reseau"><strong>Test de connectivité interne</strong></a></li>
+					            <li><a href="#Test_notre_reseau_salle"><strong>Test de connectivité entre notre réseau et le réseau de la salle de TP</strong></a></li>
+					            <li><a href="#Test_cabinte_vers_cabinet"><strong>Test de connectivité entre notre réseau et le réseau d'un autre groupe</strong></a></li>					    
+					    </ul>
+					<li><a href="#Test_de_connectivite_reel"><strong>Résultats des tests de connectivités de notre réseau réel</strong></a></li>
+					    <ul>
+					            <li><a href="#Test_connectivite_interne_reel"><strong>Test de connectivité interne (kinésithérapeute vers secrétaire)</strong></a></li>
+					            <li><a href="#Test_connectivite_externe_reel"><strong>Test de connectivité externe (kinésithérapeute vers un PC distant du groupe 3)</strong></a></li>
+					    </ul>
+					<li><a href="#Test_de_connectivite_tel"><strong>Résultats des tests de connectivités téléphoniques</strong></a></li>
+				</ul>
+			</nav>
+        </aside>
         <section id="home" class="tab-content">
-			<h1>Résultats des tests de connectivités réseaux</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			 eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		<h1>Résultats des tests de connectivités téléphoniques</h1>
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		</section>
+			<h1 id="Reseau_packet_tracer">Notre Réseau Packet Tracer</h1>
+		    <p>
+            Sur cette page, vous découvrirez le réseau que nous avons conçu à l'aide de Packet Tracer. Vous y trouverez également les résultats de nos tests de téléphonie et de connectivité, incluant des démonstrations de pings et de tracerts pour analyser les chemins de communication au sein du réseau.</br>
+            <strong>Astuce :</strong> Pour une meilleure visibilité, il est possible de cliquer sur les images.</br>
+            Voici notre réseau :</br>
+            <a class="Images_et_video" href="../Images/Reseau.png" data-lightbox="example-set" data-title="Mon réseau">
+              <img class="Images_et_video" src="../Images/Reseau.png" alt="Mon réseau">
+            </a></br>
+            Voici le réseau en son entier :</br>
+            <a class="Images_et_video" href="../Images/Reseau_entier.png" data-lightbox="example-set" data-title="Nos réseaux">
+              <img class="Images_et_video" src="../Images/Reseau_entier.png" alt="Nos réseaux">
+            </a></br>
+            <a href="../Telechargement/SAE24_reseau_packet_tracer2.pkt" download="SAE24_reseau_packet_tracer2.pkt">Télécharger le réseau </a></br>
+          </p>
+          <h1 id="Test_de_connectivite">Résultats des tests de connectivités réseaux</h1>
+          <p>
+            Nous allons maintenant vous montrer les tests de connectivité que nous avons réalisés sur Packet Tracer. Nous allons effectuer des pings et des tracerts pour vérifier et analyser les chemins de communication entre les dispositifs réseau.</br>
+            <h2 id="Test_notre_reseau">Test de connectivité interne</h2>
+                Voici un ping du PC dentiste de notre réseau au PC Kinésithérapeute de ce même réseau :</br>
+                <video class="Images_et_video" src="../Telechargement/Ping_dans_notre_reseau.mp4" poster=" preload="none" controls></video></br>
+                Voici la capture d'écran du ping réussi qui l'accompagne :</br>
+                <a class="Images_et_video" href="../Images/Test_de_connectivite/Ping_notre_reseau.png" data-lightbox="example-set" data-title="Ping réseau réussi">
+                  <img class="Images_et_video" src="../Images/Test_de_connectivite/Ping_notre_reseau.png" alt="Ping réseau réussi">
+                </a></br>
+                Voici la capture d'écran de la commande tracert effectué sur le PC du dentiste de notre réseau vers l'adresse IP du PC Kinésithérapeute de ce même réseau : 
+                <a class="Images_et_video" href="../Images/Test_de_connectivite/Tracert_PC_dentiste_vers_PC_kine.png" data-lightbox="example-set" data-title="Tracert du ping dans notre réseau">
+                  <img class="Images_et_video" src="../Images/Test_de_connectivite/Tracert_PC_dentiste_vers_PC_kine.png" alt="Tracert du ping dans notre réseau">
+                </a></br>
+            <h2 id="Test_notre_reseau_salle">Test de connectivité entre notre réseau et le cabinet du groupe 2</h2>
+                Voici un ping du PC du Medecin généraliste de notre réseau vers le PC dentiste du groupe 2 : </br>
+                <video class="Images_et_video" src="../Telechargement/Ping_notre_cabinet_cabinet2.mp4" poster=" preload="none" controls></video></br>
+                Voici la capture d'écran du ping réussi qui l'accompagne :</br>
+                <a class="Images_et_video" href="../Images/Test_de_connectivite/Ping_notre_cabinet_cabinet2.png" data-lightbox="example-set" data-title="Ping réseau réussi">
+                  <img class="Images_et_video" src="../Images/Test_de_connectivite/Ping_notre_cabinet_cabinet2.png" alt="Ping réseau réussi">
+                </a></br>
+                Voici la capture d'écran de la commande tracert effectué sur le PC du Medecin généraliste de notre réseau vers le PC dentiste du groupe 2 : 
+                <a class="Images_et_video" href="../Images/Test_de_connectivite/Tracert_notre_cabinet_cabinet2.png" data-lightbox="example-set" data-title="Tracert vers le réseau de la salle de TP">
+                  <img class="Images_et_video" src="../Images/Test_de_connectivite/Tracert_notre_cabinet_cabinet2.png" alt="Tracert vers le réseau de la salle de TP">
+                </a></br>
+            <h2 id="Test_cabinte_vers_cabinet">Test de connectivité entre notre réseau et le cabinet du groupe 3</h2>
+                Voici un ping du PC du kinésithérapeute de notre réseau vers le PC dentiste du cabinet du groupe 3 : </br>
+                <video class="Images_et_video" src="../Telechargement/Ping_notre_cabinet_cabinet3.mp4" poster=" preload="none" controls></video></br>
+                Voici la capture d'écran du ping réussi qui l'accompagne :</br>
+                <a class="Images_et_video" href="../Images/Test_de_connectivite/Ping_notre_cabinet_cabinet3.png" data-lightbox="example-set" data-title="Ping réseau réussi">
+                  <img class="Images_et_video" src="../Images/Test_de_connectivite/Ping_notre_cabinet_cabinet3.png" alt="Ping réseau réussi">
+                </a></br>
+                Voici la capture d'écran de la commande tracert effectué sur le PC du dentiste de notre réseau vers le PC dentiste du cabinet du groupe 2 : 
+                <a class="Images_et_video" href="../Images/Test_de_connectivite/Tracert_notre_cabinet_cabinet3.png" data-lightbox="example-set" data-title="Tracert du vers le second réseau cabinet">
+                  <img class="Images_et_video" src="../Images/Test_de_connectivite/Tracert_notre_cabinet_cabinet3.png" alt="Tracert du vers le second réseau cabinet">
+                </a></br>
+          </p>
+          <h1 id="Test_de_connectivite_reel">Résultats des tests de connectivités de notre réseau réel</h1>
+          <p>
+            Nous allons maintenant vous montrer les tests de connectivité que nous avons réalisés non pas sur Packet Tracer mais cette-fois ci en réel, sur les postes de la salle de TP. Nous allons effectuer des pings et des tracerts pour vérifier et analyser les chemins de communication dans notre réseau avec les réseaux des autres groupes.
+            <h2 id="Test_connectivite_interne_reel">Test de connectivité interne (kinésithérapeute vers secrétaire)</h2>
+            <ul>
+                <li>Information PC kinésithérapeute :
+                    <ul>
+                        <li>Adresse IP : 192.168.2.71/24</li>
+                        <li>Passerelle par défaut : 192.168.2.254</li>                        
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Information PC secrétaire :
+                    <ul>
+                        <li>Adresse IPV4 : 192.168.2.53/24</li>
+                        <li>Passerelle par défaut : 192.168.2.254</li>                        
+                    </ul>
+                </li>
+            </ul>
+            <strong>Important : </strong>Nous avons activé la résolution DNS, ce qui veut dire que les noms sont composés du nom d’ordinateur « RXE104- » suivi de leur fonction donc :
+            <ul>
+                <li>RXE104-Kiné1</li>
+                <li>RXE104-Kiné2</li>
+                <li>RXE104-Kiné3</li>
+                <li>RXE104-Généraliste</li>
+                <li>RXE104-Dentiste</li>
+            </ul>
+            Voici la capture d'écran du ping du PC kinésithérapeute de notre réseau vers le PC secrétaire de notre réseau :</br>
+            <a class="Images_et_video" href="../Images/Test_de_connectivite/Ping_kine_secretaire.png" data-lightbox="example-set" data-title="Ping réseau réussi">
+              <img class="Images_et_video" src="../Images/Test_de_connectivite/Ping_kine_secretaire.png" alt="Ping réseau réussi">
+            </a></br>
+            Voici la capture d'écran de la commande tracert effectué du PC kinésithérapeute de notre réseau vers le PC secrétaire de notre réseau :</br>
+            <a class="Images_et_video" href="../Images/Test_de_connectivite/Tracert_kine_secretaire.png" data-lightbox="example-set" data-title="Tracert du ping dans notre réseau">
+              <img class="Images_et_video" src="../Images/Test_de_connectivite/Tracert_kine_secretaire.png" alt="Tracert du ping dans notre réseau">
+            </a></br>
+             
+            <h2 id="Test_connectivite_externe_reel">Test de connectivité externe (kinésithérapeute vers un PC distant du groupe 3)</h2>
+            <ul>
+                <li>Information PC kinésithérapeute :
+                    <ul>
+                        <li>Adresse IP : 192.168.2.71/24</li>
+                        <li>Passerelle par défaut : 192.168.2.254</li>                        
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Information PC Distant groupe 3 :
+                    <ul>
+                        <li>Adresse IPV4 : 192.168.3.34/24</li>
+                        <li>Passerelle par défaut : 192.168.3.254</li>                        
+                    </ul>
+                </li>
+            </ul>
+            Voici la capture d'écran du ping du PC kinésithérapeute de notre réseau vers le PC distant du groupe 3 : </br>
+            <a class="Images_et_video" href="../Images/Test_de_connectivite/Ping_kine_groupe3.png" data-lightbox="example-set" data-title="Ping réseau réussi">
+              <img class="Images_et_video" src="../Images/Test_de_connectivite/Ping_kine_groupe3.png" alt="Ping réseau réussi">
+            </a></br>
+            Voici la capture d'écran de la commande tracert effectué du PC kinésithérapeute de notre réseau vers le PC distant du groupe 3 :</br>
+            <a class="Images_et_video" href="../Images/Test_de_connectivite/Tracert_kine_groupe3.png" data-lightbox="example-set" data-title="Tracert du ping inter-réseau">
+              <img class="Images_et_video" src="../Images/Test_de_connectivite/Tracert_kine_groupe3.png" alt="Tracert du ping inter-réseau">
+            </a></br>
+          </p>         
+          <h1 id="Test_de_connectivite_tel">Résultats des tests de connectivités téléphoniques</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    </section>
     </main>
 	<aside id="last">
 		<hr>

@@ -52,13 +52,16 @@ header nav ul li a {
 
 /* Style qui s'applique à la liste du sommaire */
 
-.Sommaire{
-	color: black;
-	background: white;
+.Sommaire {
+    background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     list-style: none;
+    width: 400px; /* Ajustez la largeur si nécessaire */
+    position: absolute; /* Utilisez la position absolue */
+    top: 150px; /* Ajustez la position verticale */
+    right: 200px; /* Ajustez la position horizontale */
 }
 
 .Sommaire ul li{
@@ -93,6 +96,8 @@ main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .welcome {
@@ -127,11 +132,24 @@ main {
     margin: 0 auto;
 }
 
+/* Style qui s'applique sur les photos et les vidéos */
+
+.Images_et_video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
 /* Style qui s'applique aux tableaux */
 
-table{
-	width: 65%;
-	border-collapse: collapse;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 caption{
@@ -141,15 +159,14 @@ caption{
   color: white;
 }
 
-th{
-  background: #C2BCBC;
-  color: white;
-  border: 1px solid black;
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+	width: 50%;
 }
-
-td{
-  border: 1px solid black;
-  padding: 10px;
+th {
+    background-color: #f2f2f2;
 }
 
 article {
@@ -307,23 +324,26 @@ form #pied_formulaire button:hover
     border-radius: 5px; /* Optionnel : ajoute des coins arrondis */
 }
 
-
 /* Style qui s'applique au bloc aside */
 
 aside#last{
-    margin: 50px
+	margin: 50px
   }
   
-  aside a{
-    text-decoration: none;
+aside a{
+	text-decoration: none;
   }
   
-  aside img{
-      border: 0;
-      width: 5%;
-      height: 5%;
+aside img{
+	border: 0;
+	width: 5%;
+	height: 5%;
   }
 
+img {
+    width: 100%;
+    max-width: 400px;
+}
 /* Style qui s'applique au bloc aside des pages participants  */
 
 .encadre {
@@ -333,7 +353,7 @@ aside#last{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px; /* Ajustez la largeur si nécessaire */
     position: absolute; /* Utilisez la position absolue */
-    top: 150px; /* Ajustez la position verticale */
+    top: 100px; /* Ajustez la position verticale */
     right: 150px; /* Ajustez la position horizontale */
 }
 
@@ -362,11 +382,6 @@ aside#last{
     position: absolute; /* Utilisez la position absolue */
     top: 150px; /* Ajustez la position verticale */
     right: 200px; /* Ajustez la position horizontale */
-}
-
-img {
-    width: 100%;
-    max-width: 400px;
 }
 
 footer {
@@ -404,4 +419,45 @@ footer ul li a {
     margin-right: 20px;
 }
 
- 
+/* Media queries pour le sommaire responsive */
+@media screen and (max-width: 1900px) {
+    .Sommaire {
+        position: static;
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .Sommaire nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Images_et_video {
+        height: auto;
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside.encadre {
+        position: static;
+        width: auto;
+        margin: 0 auto 20px auto;
+    }
+
+    section.tab-content {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+/* Media queries pour le sommaire responsive */
+@media screen and (max-width: 768px) {
+
+    aside.encadre {
+        display: none; /* Masquer le bloc aside sur les petits écrans */
+    }
+}

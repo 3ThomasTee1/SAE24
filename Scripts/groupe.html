@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,52 +14,87 @@
             <ul>
                 <li><a href="index.html"> Accueil</a></li>
                 <li><a href="rendez_vous.html"> Rendez-vous</a></li>
-                <!--<li><a href="index.html"> Nous contacter</a></li>!-->
-			</ul>
+                <!--<li><a href="index.html"> Nous contacter</a></li>-->
+            </ul>
             <a href="administration.html" class="login">Me connecter</a>
         </nav>
     </header>
     <main>
         <nav class="tab-buttons">
-			<button onclick="window.location.href='livrables.html'">Livrables</button>
-			<button onclick="window.location.href='groupe.html'">Groupe</button>
-			<button onclick="window.location.href='gestion_projet.html'">Gestion de projet</button>
-			<button onclick="window.location.href='tests.html'">Tests</button>
-		</nav>
+            <button onclick="window.location.href='livrables.html'">Livrables</button>
+            <button onclick="window.location.href='groupe.html'">Groupe</button>
+            <button onclick="window.location.href='gestion_projet.html'">Gestion de projet</button>
+            <button onclick="window.location.href='tests.html'">Tests</button>
+        </nav>
         <section class="form-container">
-            <form action="groupe.php" method="post">
-                <h2>Formulaire 2</h2>
-                    <p>Vous trouverez en sélectionnant l'une des personnes ci-dessous, une synthèse personnelle du travail qu'il a réalisé avec 
-                        une autoévaluation /20.</br>
-                        Vous pourrez également voir une évaluation /20 pour chaque membre par ses pairs qui prend en compte son implication, ses idées
-                        apportées ...</p></br>
-                        <select name="participants" id="participants">
-                            <option value="THOMAS_Nelson ">THOMAS Nelson</option>
-                            <option value="TEIXEIRA_Ludovic">TEIXEIRA Ludovic</option>
-                            <option value="TRESGOTS_Thomas ">TRESGOTS Thomas</option>
-                            <option value="BEUDOT_Clement">BEUDOT Clement</option>
-                            <option value="IRASTORZA_Enzo ">IRASTORZA Enzo</option>
-                            <option value="IRAOLA_Alatz">IRAOLA Alatz</option>
-                            <option value="FERRIGNO_Nicolas">FERRIGNO Nicolas</option>
-                            <option value="LEVEIL_Marin">LEVEIL Marin</option>
-                        </select>
-                    <p>
-                        <input class="bouton" type="submit" value="Valider" />
-                        <input class="bouton" type="reset" value="Annuler" />
-                    </p>
+            <form action="Participants/participants.php" method="post">
+				                <h2>Répartition des tâches</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Personnes</th>
+                            <th>Tâches</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clément et Nelson</td>
+                            <td>Configuration d'ExSi et du serveur ADDS</td>
+                        </tr>
+                        <tr>
+                            <td>Enzo et Marin</td>
+                            <td>Packet Tracer, schéma réseau Visual Paradigm, tests réels</td>
+                        </tr>
+                        <tr>
+                            <td>Thomas et Ludovic</td>
+                            <td>Conception du site web et des livrables demandés</td>
+                        </tr>
+                        <tr>
+                            <td>Nicolas, Nelson et Alatz</td>
+                            <td>Partie téléphonique (serveur Asterisk) et numérotation</td>
+                        </tr>
+                        <tr>
+                            <td>Nelson</td>
+                            <td>Services réseau (SMTP, FTP, POP3, SSH)</td>
+                        </tr>
+                        <tr>
+                            <td >Alatz</td>
+                            <td>Configuration du point d'accès wifi</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Selection d'un candidat</h2>
+                <label for="participants">Veuillez sélectionner l'étudiant dont vous voulez voir la fiche :</label>
+                <p>Vous trouverez en sélectionnant l'une des personnes ci-dessous, une synthèse personnelle du travail qu'il a réalisé avec une autoévaluation /20.</br>
+                    Vous pourrez également voir une évaluation /20 pour chaque membre par ses pairs qui prend en compte son implication, ses idées apportées ...</p></br>
+                <p>Notre groupe est composé de :</p></br>
+                <select name="participants" id="participants">
+                    <option value="THOMAS_Nelson">THOMAS Nelson</option>
+                    <option value="TEIXEIRA_Ludovic">TEIXEIRA Ludovic</option>
+                    <option value="TRESGOTS_Thomas">TRESGOTS Thomas</option>
+                    <option value="BEUDOT_Clement">BEUDOT Clement</option>
+                    <option value="IRASTORZA_Enzo">IRASTORZA Enzo</option>
+                    <option value="IRAOLA_Alatz">IRAOLA Alatz</option>
+                    <option value="FERRIGNO_Nicolas">FERRIGNO Nicolas</option>
+                    <option value="LEVEIL_Marin">LEVEIL Marin</option>
+                </select>
+                <p>
+                    <input class="bouton" type="submit" value="Valider" />
+                    <input class="bouton" type="reset" value="Annuler" />
+                </p>
             </form>
-            </section>
+        </section>
     </main>
     <aside id="last">
-		<hr>
-			<p><em> Validation de la page HTML5 - CSS3 </em></p>
-				<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Ftresgots.atwebpages.com%2FSAE_14%2Findex.html" target="_blank"> 
-					<img class= "image-responsive" src="../Images/html-5.png" alt="HTML5 Valide !">
-				</a>
-				<a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ftresgots.atwebpages.com%2FSAE_14%2FStyle%2FStyle_adaptatif.css" target="_blank">
-					<img class= "image-responsive" src="../Images/css-3.png" alt="CSS Valide !">
-				</a>
-	</aside>
+        <hr>
+        <p><em> Validation de la page HTML5 - CSS3 </em></p>
+        <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Ftresgots.atwebpages.com%2FSAE_14%2Findex.html" target="_blank">
+            <img class="image-responsive" src="../Images/html-5.png" alt="HTML5 Valide !">
+        </a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ftresgots.atwebpages.com%2FSAE_14%2FStyle%2FStyle_adaptatif.css" target="_blank">
+            <img class="image-responsive" src="../Images/css-3.png" alt="CSS Valide !">
+        </a>
+    </aside>
     <footer>
         <ul>
             <li><a href="https://www.iut-blagnac.fr/" target="_blank"><strong>l'IUT de Blagnac</strong></a></li>
